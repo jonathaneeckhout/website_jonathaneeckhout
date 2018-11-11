@@ -4,19 +4,21 @@ var fs = require('fs');
 
 var PORT = 4567;
 
-var WEBPAGEDIR = ".";
+var WEBPAGEDIR = "./www";
 var HOMEPAGE = WEBPAGEDIR + "/index.html";
 
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
 
     var filename = "";
-    if (q.pathname) {
+
+    console.log("Pathname: " + q.pathname);
+    if (q.pathname === '/') {
         filename = HOMEPAGE;
     } else {
         filename = WEBPAGEDIR + q.pathname;
     }
-    console.log(filename);
+    console.log("Filename: " + filename);
     fs.readFile(filename, function(err, data) {
         if (err) {
             res.writeHead(404, {'Content-Type': 'text/html'});
