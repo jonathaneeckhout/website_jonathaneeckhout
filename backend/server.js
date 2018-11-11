@@ -42,18 +42,24 @@ function getWebPageFile (path) {
 
 http.createServer(function (req, res) {
 
-    var q = url.parse(req.url, true);
+    if (req.method === 'GET') {
+        var q = url.parse(req.url, true);
 
-    var filename = getWebPageFile(q.pathname);
+        var filename = getWebPageFile(q.pathname);
 
-    fs.readFile(filename, function(err, data) {
-        if (err) {
-            return sendHttpError(req, res);
-        }
+        fs.readFile(filename, function(err, data) {
+            if (err) {
+                return sendHttpError(req, res);
+            }
 
-        setHttpHeader(req, res);
-        res.write(data);
-        return res.end();
-    });
+            setHttpHeader(req, res);
+            res.write(data);
+            return res.end();
+        });
+    } else if (req.method === 'PUSH') {
+        return sendHttpError(req, res);
+    } else {
+        return sendHttpError(req, res);
+    }
 
 }).listen(PORT);
