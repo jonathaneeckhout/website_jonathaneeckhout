@@ -10,28 +10,48 @@ var HOMEPAGE = WEBPAGEDIR + "/index.html";
 var HTTP_HTML_HEADER = {'Content-Type': 'text/html'};
 var HTTP_CSS_HEADER = {'Content-Type': 'text/css'};
 
-http.createServer(function (req, res) {
-    var q = url.parse(req.url, true);
+function setHttpHeader(req, res) {
 
+    var contentType =  req.headers['accept'].split(",")[0];
+
+    if (contentType === 'text/html') {
+        res.writeHead(200, HTTP_HTML_HEADER);
+    }
+    else if (contentType === 'text/css') {
+        res.writeHead(200, HTTP_CSS_HEADER);
+    } else {
+        res.writeHead(200, HTTP_HTML_HEADER);
+    }
+}
+
+function sendHttpError (req, res) {
+    setHttpHeader(req, res);
+    return res.end("404 Not Found");
+}
+
+function getWebPageFile (path) {
     var filename = "";
 
-    if (q.pathname === '/') {
+    if (path === '/') {
         filename = HOMEPAGE;
     } else {
-        filename = WEBPAGEDIR + q.pathname;
+        filename = WEBPAGEDIR + path;
     }
+    return filename;
+}
 
-    var header = HTTP_HTML_HEADER;
-    if (q.pathname.endsWith("css")) {
-        header = HTTP_CSS_HEADER;
-    }
+http.createServer(function (req, res) {
+
+    var q = url.parse(req.url, true);
+
+    var filename = getWebPageFile(q.pathname);
 
     fs.readFile(filename, function(err, data) {
         if (err) {
-            res.writeHead(404, header);
-            return res.end("404 Not Found");
+            return sendHttpError(req, res);
         }
-        res.writeHead(200, header);
+
+        setHttpHeader(req, res);
         res.write(data);
         return res.end();
     });
