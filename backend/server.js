@@ -13,7 +13,10 @@ var HTTP_CSS_HEADER = {'Content-Type': 'text/css'};
 function setHttpHeader(req, res) {
 
     var contentType =  req.headers['accept'].split(",")[0];
-
+    if (contentType == null) {
+        res.writeHead(200, HTTP_HTML_HEADER);
+        return;
+    }
     if (contentType === 'text/html') {
         res.writeHead(200, HTTP_HTML_HEADER);
     }
