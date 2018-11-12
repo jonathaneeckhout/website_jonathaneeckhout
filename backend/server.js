@@ -9,6 +9,7 @@ var HOMEPAGE = WEBPAGEDIR + "/index.html";
 
 var HTTP_HTML_HEADER = {'Content-Type': 'text/html'};
 var HTTP_CSS_HEADER = {'Content-Type': 'text/css'};
+var HTTP_ALL_HEADER = {'Content-Type': '*/*'};
 
 function setHttpHeader(req, res) {
 
@@ -17,11 +18,13 @@ function setHttpHeader(req, res) {
         res.writeHead(200, HTTP_HTML_HEADER);
         return;
     }
+
     if (contentType === 'text/html') {
         res.writeHead(200, HTTP_HTML_HEADER);
-    }
-    else if (contentType === 'text/css') {
+    } else if (contentType === 'text/css') {
         res.writeHead(200, HTTP_CSS_HEADER);
+    } else if (contentType === '*/*') {
+        res.writeHead(200, HTTP_ALL_HEADER);
     } else {
         res.writeHead(200, HTTP_HTML_HEADER);
     }
