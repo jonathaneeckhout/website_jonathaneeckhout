@@ -1,0 +1,24 @@
+.projects {
+	display : flex;
+	flex-wrap: wrap;
+}
+
+.project {
+	flex : 1 29%;
+	border: 1px solid #a3bedc;
+	border-radius: 4px;
+	padding : 1%;
+	margin : 1%;
+	max-width : 29%;
+}
+
+.project > img {
+	border: 1px solid #dae5f1;
+	border-radius: 4px;
+	padding : 5%;
+	max-width : 90%;
+}
+
+.project> p {
+	text-align : justify;
+}
