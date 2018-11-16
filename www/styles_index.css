@@ -1,0 +1,25 @@
+.scenario {
+	display : flex;
+	flex-direction : row;
+	align-items : center;
+	margin : 30px;
+}
+
+.scenario > h2 {
+	padding-right : 30px;
+}
+
+.scenario_element {
+	flex: 1;
+	
+}
+
+.img_scenario_vertical {
+	max-width : 300px;
+	max-height : 400px;
+}
+
+.img_scenario_horizontal {
+	max-width : 400px;
+	max-height : 300px;
+}
