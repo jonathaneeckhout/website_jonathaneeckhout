@@ -92,6 +92,11 @@ footer {
 	text-align: right;
 }
 
+.paragraph {
+	margin : 1%;
+	text-align : justify;
+}
+
 .paragraph_image_right {
 	float : right;
 	max-width: 20%;
