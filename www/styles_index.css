@@ -2,36 +2,42 @@
 	display : flex;
 	flex-direction : row;
 	align-items : center;
-	margin : 10px;
-	border: 1px solid #a3bedc;
+	border: 1% solid #a3bedc;
 	border-radius: 10px;
+	margin : 1%;
 	background-color: white;
 }
 
-.scenario > h2 {
-	padding-right : 30px;
-	padding-left: 15px;
+.scenario_number > h2 {
+	text-align: center;
+}
+
+.scenario_number {
+	flex: 1;
 }
 
 .scenario_element {
-	flex: 1;
-
+	flex: 2;
 }
 
 .img_scenario_vertical {
-	max-width : 300px;
-	max-height : 400px;
+	max-width : 100%;
+	max-height : 100%;
 }
 
 .img_scenario_horizontal {
-	max-width : 400px;
-	max-height : 300px;
+	max-width : 100%;
+	max-height : 100%;
 }
 
 .img_scenario_two_horizontal {
 	display : flex;
 	flex-direction : row;
 	align-items : center;
-	margin : 10px;
 	background-color: white;
+}
+
+.img_scenario_two_horizontal > img {
+	flex : 1;
+	max-width: 50%;
 }
