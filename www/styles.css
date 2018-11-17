@@ -91,3 +91,9 @@ footer {
 	padding: 10px;
 	text-align: right;
 }
+
+.paragraph_image_right {
+	float : right;
+	max-width: 20%;
+	margin: 2%;
+}
