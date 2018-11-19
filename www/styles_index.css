@@ -1,13 +1,13 @@
 .scenario {
-	flex : 1;
 	display : flex;
 	flex-direction : row;
 	align-items : center;
-	border: 1% solid #a3bedc;
+	border: 1px solid #a3bedc;
 	border-radius: 10px;
 	margin : 1%;
 	background-color: white;
 	min-width: 300px;
+    padding : 10px;
 }
 
 .scenario_number > h2 {
@@ -24,12 +24,12 @@
 
 .img_scenario_vertical {
 	max-width : 100%;
-	max-height : 100%;
+	max-height : 250px;
 }
 
 .img_scenario_horizontal {
 	max-width : 100%;
-	max-height : 100%;
+	max-height : 250px;
 }
 
 .img_scenario_two_horizontal {
