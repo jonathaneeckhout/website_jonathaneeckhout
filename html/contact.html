@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="../css/styles_contact.css">
     <link rel="stylesheet" href="../css/styles_index.css">
+    <script src="../js/contact.js" charset="utf-8"></script>
 </head>
 <body>
     <div class="navigation_bar">
@@ -37,14 +38,16 @@
                 <div class="scenario_element">
                     <div class="form_container">
                         <h2>Direct contact form:</h2>
-                        <form action="" >
+                        <form id="emailform" action="" method="post" >
                             <label for="fname">First Name</label>
                             <input type="text" id="fname" name="firstname" placeholder="Your name..">
                             <label for="lname">Last Name</label>
                             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" name="email" placeholder="Your email address..">
                             <label for="subject">Subject</label>
                             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-                            <input type="submit" value="Submit">
+                            <button type="submit" id="submitbutton" >submit</button>
                         </form>
                     </div>
                 </div>
