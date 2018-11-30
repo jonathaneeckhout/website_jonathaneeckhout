@@ -59,7 +59,6 @@ module.exports = {
     handlePost : function(server, data) {
         var formData = formPostDataToObj(data);
         sendFormMail(server, formData);
-        console.log("Called function in contact.js");
         //This is the page where the site should return to after filling in the form
         return '/html/contact.html';
     }
