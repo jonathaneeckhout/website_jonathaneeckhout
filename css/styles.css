@@ -1,104 +1,108 @@
 header {
-	display : flex;
-	width: 100%;
-	height : 200px;
-	position: relative;
-	margin: 0px;
-	padding : 0px;
-	background-color : #90b0d5;
+    display : flex;
+    width: 100%;
+    height : 200px;
+    position: relative;
+    margin: 0px;
+    padding : 0px;
+    background-color : #90b0d5;
 }
 
 header > h1 {
-	padding : 30px;
+    padding : 30px;
 }
 
 .img_logo {
-	padding : 10%;
-	max-width: 80%;
+    max-width: 80%;
+    min-width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .navigation_bar {
 }
 
 .nav_ul {
-	list-style-type: none;
-	background-color : #1b324b;
-	display : flex;
-	align-items : center;
-	margin : 0;
-	padding : 0;
+    list-style-type: none;
+    background-color : #1b324b;
+    display : flex;
+    align-items : center;
+    margin : 0;
+    padding : 0;
 }
 
 .nav_li {
-	flex: 1;
+    flex: 1;
 }
 
 .nav_li_active {
-	flex: 1;
-	background-color : #152537;
+    flex: 1;
+    background-color : #152537;
 }
 
 .nav_li:hover,
 .nav_li:active,
 .nav_li:focus {
-	background-color : #152537;
+    background-color : #152537;
 }
 
 .nav_li > a,
 .nav_li_active > a {
-	display: block;
-	color: white;
-	text-align: center;
-	padding: 24px 30px;
-	text-decoration: none;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 24px 30px;
+    text-decoration: none;
 }
 
 .main_blob {
-	display : flex;
-	flex-direction: column;
-	flex: 2;
+    display : flex;
+    flex-direction: column;
+    flex: 2
 }
 
 .main_body {
-	display : flex;
-	flex-direction : row;
-	margin : 0;
-	background-color: #edf2f8;
+    display : flex;
+    flex-direction : row;
+    flex-wrap: wrap;
+    margin : 0;
+    background-color: #edf2f8;
 }
 
 .sides {
-	background-color : #edf2f8;
+    background-color : #edf2f8;
 }
 
 .side_left {
-flex: 1;
+    flex: 1;
 }
 
 .side_right {
-flex: 1;
+    flex: 1;
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	margin : 0px;
+    margin: 0;
+    padding: 0;
+    margin : 0px;
 }
 footer {
-	height: 6em;
-	background-color: #90b0d5;
-	position: relative;
-	margin : 0;
-	padding: 10px;
-	text-align: right;
+    height: 6em;
+    background-color: #90b0d5;
+    position: relative;
+    margin : 0;
+    padding: 10px;
+    text-align: right;
 }
 
 .paragraph {
-	margin : 1%;
-	text-align : justify;
+    margin : 1%;
+    text-align : justify;
 }
 
 .paragraph_image_right {
-	float : right;
-	max-width: 20%;
-	margin: 2%;
+    float : right;
+    max-width: 20%;
+    margin: 2%;
 }
