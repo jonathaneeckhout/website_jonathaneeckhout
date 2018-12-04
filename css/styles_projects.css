@@ -10,7 +10,7 @@
     padding : 1%;
     margin : 5px;
     max-width : 29%;
-    min-width: 250px;
+    min-width: 200px;
     background-color: white;
 }
 
@@ -21,6 +21,10 @@
     max-width : 90%;
 }
 
-.project> p {
+.project > p {
     text-align : justify;
+}
+
+.project > a {
+    overflow-wrap: break-word;
 }
