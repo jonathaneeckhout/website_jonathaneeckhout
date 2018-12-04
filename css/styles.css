@@ -94,6 +94,7 @@ footer {
     margin : 0;
     padding: 10px;
     text-align: right;
+    min-width: 99%;
 }
 
 .paragraph {
